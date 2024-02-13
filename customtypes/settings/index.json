@@ -27,6 +27,23 @@
           "label": "meta descriptions",
           "placeholder": ""
         }
+      },
+      "navigations": {
+        "type": "Group",
+        "config": {
+          "label": "Navigations",
+          "repeat": true,
+          "fields": {
+            "link": {
+              "type": "Link",
+              "config": {
+                "label": "link",
+                "placeholder": "",
+                "select": null
+              }
+            }
+          }
+        }
       }
     }
   }

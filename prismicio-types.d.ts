@@ -70,6 +70,21 @@ export type LandingPageDocument<Lang extends string = string> =
   >;
 
 /**
+ * Item in *settings → Navigations*
+ */
+export interface SettingsDocumentDataNavigationsItem {
+  /**
+   * link field in *settings → Navigations*
+   *
+   * - **Field Type**: Link
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.navigations[].link
+   * - **Documentation**: https://prismic.io/docs/field#link-content-relationship
+   */
+  link: prismic.LinkField;
+}
+
+/**
  * Content for settings documents
  */
 interface SettingsDocumentData {
@@ -105,6 +120,19 @@ interface SettingsDocumentData {
    * - **Documentation**: https://prismic.io/docs/field#key-text
    */
   meta_descriptions: prismic.KeyTextField;
+
+  /**
+   * Navigations field in *settings*
+   *
+   * - **Field Type**: Group
+   * - **Placeholder**: *None*
+   * - **API ID Path**: settings.navigations[]
+   * - **Tab**: Main
+   * - **Documentation**: https://prismic.io/docs/field#group
+   */
+  navigations: prismic.GroupField<
+    Simplify<SettingsDocumentDataNavigationsItem>
+  >;
 }
 
 /**
@@ -140,6 +168,7 @@ declare module "@prismicio/client" {
       LandingPageDocumentDataSlicesSlice,
       SettingsDocument,
       SettingsDocumentData,
+      SettingsDocumentDataNavigationsItem,
       AllDocumentTypes,
     };
   }
