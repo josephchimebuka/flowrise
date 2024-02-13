@@ -1,0 +1,33 @@
+{
+  "format": "custom",
+  "id": "settings",
+  "label": "settings",
+  "repeatable": false,
+  "status": true,
+  "json": {
+    "Main": {
+      "main_text": {
+        "type": "Text",
+        "config": {
+          "label": "main text",
+          "placeholder": ""
+        }
+      },
+      "og_image": {
+        "type": "Image",
+        "config": {
+          "label": "OG image",
+          "constraint": {},
+          "thumbnails": []
+        }
+      },
+      "meta_descriptions": {
+        "type": "Text",
+        "config": {
+          "label": "meta descriptions",
+          "placeholder": ""
+        }
+      }
+    }
+  }
+}
